@@ -19,6 +19,7 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="login_signup.html">Login Signup</a></li>
         <li><a href="table_page.html">Table</a></li>
+        <button id="myBtn" class="btn waves-effect waves-light" type="submit" name="add-btn" onclick="addModal()">Submit</button>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -26,10 +27,12 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="login_signup.html">Login Signup</a></li>
         <li><a href="table_page.html">Table</a></li>
+        <li><a class="waves-effect waves-light btn" id="add-btn" onlick=modal();>Add Event</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+
 
   <div class="container">
     <div class="section">
@@ -84,11 +87,66 @@
         </table>
       </div>
     </div>
+    <div class="section">
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="row">
+            <div class="form">
+              <div class="tab-content">
+                <div id="signup">
+                  <form action="#" method="post" id="sign-up-form">
+                  <div class="top-row">
+                    <div class="field-wrap">
+                      <label>Event - (Ex. Work)<span class="req">*</span></label>
+                      <input name="username" type="text" required autocomplete="off" />
+                    </div>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label>Date - (Ex. 01/01/10)<span class="req">*</span></label>
+                    <input name="email" type="email" required autocomplete="off"/>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label>Departing - (Ex. Orlando, Fl)<span class="req">*</span></label>
+                    <input id="autocomplete" placeholder="Enter starting location"
+                           onFocus="currentLocAuto()" type="text" autocomplete="off">
+                    </input>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label>Arriving  - (Ex. Tampa, Fl)<span class="req">*</span></label>
+                    <input id="autocompletes" placeholder="Enter ending location"
+                           onFocus="destinationLocAuto()" type="text" autocomplete="off">
+                    </input>
+                  </div>
+
+                  <div class="field-wrap">
+                    <label>Arrival  - (Ex. 9:00 AM)<span class="req">*</span></label><br/>
+                    <input style="width:49%; float:left;" name="phone" type="text"required autocomplete="off"/>
+                    <input style="width:49%; float:right;" name="phone" type="text"required autocomplete="off"/>
+                  </div>
+                  <button type="submit" value="Submit" id="event-add-btn" class="button button-block"/>Get Started</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
+
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP9wo3OPbTjnXug18mUwl0T68xMReaKdQ&libraries=places"
+      async defer></script>
   <script src="../js/materialize.js"></script>
   <script src="../js/navbar.js"></script>
+  <script src="../js/events.js"></script>
   </body>
 </html>
