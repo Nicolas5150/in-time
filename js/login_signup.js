@@ -17,7 +17,7 @@ $(function () {
     event.preventDefault();// using this page stop being refreshing
     $.ajax({
       type: 'POST',
-      url: 'http://sulley.cah.ucf.edu/~ni927795/starter-template/register.php',
+      url: 'http://sulley.cah.ucf.edu/~ni927795/in-time/php/register.php',
       data: $('#sign-up-form').serialize(),
       success: function (data) {
         alert(data);
@@ -30,7 +30,7 @@ $(function () {
     event.preventDefault();// using this page stop being refreshing
     $.ajax({
       type: 'POST',
-      url: 'http://sulley.cah.ucf.edu/~ni927795/starter-template/login.php',
+      url: 'http://sulley.cah.ucf.edu/~ni927795/in-time/php/login.php',
       data: $('#login-form').serialize(),
       success: function (data) {
         alert(data);
