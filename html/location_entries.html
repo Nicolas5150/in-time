@@ -34,7 +34,7 @@
              onFocus="destinationLocAuto()" type="text" autocomplete="off"></input>
     </div>
 
-    <button>Get JSON data</button>
+    <button id="submit">Get JSON data</button>
     <div></div>
 
     <script>
@@ -67,7 +67,7 @@
 
       // http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_ajax_getjson
       // https://developers.google.com/maps/documentation/javascript/distancematrix
-      $("button").click(function(){
+      $("#submit").click(function(){
         var service = new google.maps.DistanceMatrixService;
       service.getDistanceMatrix({
         origins: [document.getElementById('autocomplete').value],

@@ -54,6 +54,7 @@ function destinationLocAuto() {
       {types: ['geocode']});
 }
 
+// PUT MATRIX HERE.
 // http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_ajax_getjson
 // https://developers.google.com/maps/documentation/javascript/distancematrix
 $("#event-add-btn").click(function(){
@@ -70,6 +71,10 @@ service.getDistanceMatrix({
     trafficModel: 'bestguess'
   }
 }, function(response, status) {
+  alert(document.getElementById('autocomplete').value);
+  alert(document.getElementById('autocompletes').value);
+  alert(response);
+  alert(status);
   if (status !== google.maps.DistanceMatrixStatus.OK) {
     alert('Error was: ' + status);
   } else {
@@ -81,8 +86,11 @@ service.getDistanceMatrix({
     alert(secondsToHms(response.rows[0].elements[0].duration.value));
   }
 });
-alert(document.getElementById('autocomplete').value);
+//alert(document.getElementById('autocomplete').value);
 });
+
+
+
 
 // Convert value of seconds passed from DistanceMatrixService to Hr:Min:Sec.
 function secondsToHms(d) {
