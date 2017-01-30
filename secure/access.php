@@ -97,5 +97,23 @@ class access{
         $row = false;
         return $row;
     }
+
+    public function insertEvent($username) {
+      // INSERT INTO users SET   This is SQL syntax and "users" in the table name
+      $sql ="INSERT INTO users SET username =?, password=?, email=?, phone=?";
+      // Store query result in statement var
+      $statement = $this->connection->prepare($sql);
+
+      //Check for statment
+      if(!$statement){
+          throw new Exception($statement->error);
+      }
+      // Bind as strings with all 5 variables - prepairing
+      $statement->bind_param("ssss", $username ,$password, $email, $phone);
+
+      $returnValue = $statement->execute();
+
+      return $returnValue;
+  }
 }
 ?>

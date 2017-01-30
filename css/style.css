@@ -6,6 +6,10 @@
  * Made By MaterializeCSS.com
  */
 
+.parallax-container {
+  height: 500px;
+}
+
 .icon-block {
   padding: 0 15px;
 }

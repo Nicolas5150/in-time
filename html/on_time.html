@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>In-Time</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/jquery-ui.min.css">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel='stylesheet' type='text/css'href='../css/timepicki.css'/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="#4db6ac teal lighten-2" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">In-Time</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../html/on_time.html">Try</a></li>
+        <li><a href="../html/contact.html">Contact</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../html/on_time.html">Try</a></li>
+        <li><a href="../html/contact.html">Contact</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <br/><br/><br/><br/><br/>
+  <div class="container">
+    <div class="section enter_data">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="event" type="text" class="validate" placeholder="Work">
+          <label for="event">Event</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="datepicker" type="text" class="validate" placeholder="09/02/17">
+          <label for="datepicker">Date &amp; Time</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="timepicker" type="text" class="validate" name="timepicker" placeholder="06:25 PM">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="autocomplete-current" type="text" class="validate" placeholder="Tampa, FL"
+          onFocus="currentLocAuto()" autocomplete="off">
+          <label for="autocomplete-current">Current Location</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="autocomplete-destination" type="text" class="validate" placeholder="Orlando, FL"
+          onFocus="destinationLocAuto()" autocomplete="off">
+          <label for="autocomplete-destination">Destination</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="number" type="text" class="validate" placeholder="5555555555" maxlength="10">
+          <label for="number">Number</label>
+        </div>
+        <div class="input-field col s6">
+           <select>
+             <option value="1">AT&amp;T</option>
+             <option value="2">Sprint</option>
+             <option value="2">T-Mobile</option>
+             <option value="3">Verizon</option>
+           </select>
+           <label>Carrier</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="depart" type="text" class="validate" placeholder="">
+          <label for="depart">Departure Time</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="travel" type="text" class="validate" placeholder="">
+          <label for="travel">Travel Time</label>
+        </div>
+      </div>
+
+      <button type="submit" value="Submit" id="event-add-btn"
+      class="btn-large waves-effect waves-light deep-orange accent-4">Check time</button>
+
+      <button type="submit" value="Submit" id="event-add-btn" style="float:right;"
+      class="btn-large waves-effect waves-light deep-orange accent-4">Get Me There In-Time!</button>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP9wo3OPbTjnXug18mUwl0T68xMReaKdQ&libraries=places"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/timepicki.js"></script>
+  <script src="../js/moment.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/events.js"></script>
+  </body>
+</html>
