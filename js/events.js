@@ -6,6 +6,40 @@
   $('#timepicker').timepicki({
     start_time: ["12", "00", "PM"],
     step_size_minutes:10});
+
+
+    // Validate user input client side.
+    // https://jqueryvalidation.org
+    // http://stackoverflow.com/questions/15060292/a-simple-jquery-form-validation-script
+    $('#event-form').validate({
+      rules: {
+        events: {
+          required: true
+        },
+        datepicker: {
+          required: true
+        },
+        timepicker: {
+          required: true
+        },
+        current: {
+          required: true
+        },
+        destination: {
+          required: true
+        },
+        number: {
+          required: true
+        },
+        depart: {
+          required: true
+        },
+        travel: {
+          required: true
+        },
+      },
+    });
+
 })(jQuery);
 
   function addModal() {

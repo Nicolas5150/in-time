@@ -33,18 +33,18 @@
 
   <br/><br/><br/><br/><br/>
   <div class="container">
-<form action="#" method="post" id="contact-forms">
+<form action="#" method="post" id="event-form">
     <div class="section enter_data">
       <div class="row">
         <div class="input-field col s12">
-          <input id="event" type="text" class="validate" placeholder="Work">
+          <input id="event" type="text" class="validate" name="events" placeholder="Work">
           <label for="event">Event</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s6">
-          <input id="datepicker" type="text" class="validate" placeholder="09/02/17">
+          <input id="datepicker" type="text" class="validate" name="datepicker" placeholder="09/02/17">
           <label for="datepicker">Date &amp; Time</label>
         </div>
         <div class="input-field col s6">
@@ -54,12 +54,12 @@
 
       <div class="row">
         <div class="input-field col s6">
-          <input id="autocomplete-current" type="text" class="validate" placeholder="Tampa, FL"
+          <input id="autocomplete-current" type="text" class="validate" name="current" placeholder="Tampa, FL"
           onFocus="currentLocAuto()" autocomplete="off">
           <label for="autocomplete-current">Current Location</label>
         </div>
         <div class="input-field col s6">
-          <input id="autocomplete-destination" type="text" class="validate" placeholder="Orlando, FL"
+          <input id="autocomplete-destination" type="text" class="validate" name="destination" placeholder="Orlando, FL"
           onFocus="destinationLocAuto()" autocomplete="off">
           <label for="autocomplete-destination">Destination</label>
         </div>
@@ -67,11 +67,11 @@
 
       <div class="row">
         <div class="input-field col s6">
-          <input id="number" type="text" class="validate" placeholder="5555555555" maxlength="10">
+          <input id="number" type="text" class="validate" placeholder="5555555555" name="number" maxlength="10">
           <label for="number">Number</label>
         </div>
         <div class="input-field col s6">
-           <select>
+           <select name="carrier">
              <option value="1">AT&amp;T</option>
              <option value="2">Sprint</option>
              <option value="2">T-Mobile</option>
@@ -83,11 +83,11 @@
 
       <div class="row">
         <div class="input-field col s6">
-          <input id="depart" type="text" class="validate" placeholder="">
+          <input id="depart" type="text" class="validate" name="depart" placeholder="">
           <label for="depart">Departure Time</label>
         </div>
         <div class="input-field col s6">
-          <input id="travel" type="text" class="validate" placeholder="">
+          <input id="travel" type="text" class="validate" name="travel" placeholder="">
           <label for="travel">Travel Time</label>
         </div>
       </div>
