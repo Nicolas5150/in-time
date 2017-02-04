@@ -81,22 +81,23 @@
         </div>
       </div>
 
-      <div class="row">
+      <br/><br/>
+      <div id="hidden" class="row">
         <div class="input-field col s6">
-          <input id="depart" type="text" class="validate" name="depart" placeholder="">
+          <input id="depart" type="text" name="depart" placeholder="" readonly>
           <label for="depart">Departure Time</label>
         </div>
         <div class="input-field col s6">
-          <input id="travel" type="text" class="validate" name="travel" placeholder="">
+          <input id="travel" type="text" name="travel" placeholder="" readonly>
           <label for="travel">Travel Time</label>
         </div>
       </div>
 
-      <button type="submit" value="Submit" id="event-add-btn"
+      <button type="submit" value="Submit" id="event-check-btn"
       class="btn-large waves-effect waves-light deep-orange accent-4">Check time</button>
 
       <button type="submit" value="Submit" id="event-add-btn" style="float:right;"
-      class="btn-large waves-effect waves-light deep-orange accent-4">Get Me There In-Time!</button>
+      class="btn-large waves-effect waves-light deep-orange accent-4 disabled">Get Me There In-Time!</button>
     </div>
 </form>
   </div>

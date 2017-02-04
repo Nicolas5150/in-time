@@ -7,7 +7,6 @@
     start_time: ["12", "00", "PM"],
     step_size_minutes:10});
 
-
     // Validate user input client side.
     // https://jqueryvalidation.org
     // http://stackoverflow.com/questions/15060292/a-simple-jquery-form-validation-script
@@ -29,16 +28,25 @@
           required: true
         },
         number: {
-          required: true
+          required: true,
+          minlength: 10,
+          maxlength: 10
         },
-        depart: {
-          required: true
-        },
-        travel: {
-          required: true
-        },
+        pass: "required"
       },
-    });
+      // The validation has passed, all entries have been typed in.
+      submitHandler: function (form) {
+        // Call the distance matrix within the function.
+        calculateDistance();
+
+        // Reveal the hidden rows after the distance matrix has been ran.
+        document.getElementById("hidden").style.display = "block";
+
+        // Now allow user to hit the submit button to add to database.
+        // http://stackoverflow.com/questions/195951/change-an-elements-class-with-javascript
+        document.getElementById("event-add-btn").className = document.getElementById("event-add-btn").className.replace( /(?:^|\s)disabled(?!\S)/g , '' );
+      }
+    })
 
 })(jQuery);
 
@@ -98,7 +106,7 @@
   // Google Maps Matrix API - used to find the travel time between two points.
   // http://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_ajax_getjson
   // https://developers.google.com/maps/documentation/javascript/distancematrix
-  $("#event-add-btn").click(function(){
+  function calculateDistance(){
     // Prevent default, w/o, causes matrix to not have origin / destination values.
     event.preventDefault();
     var service = new google.maps.DistanceMatrixService;
@@ -150,7 +158,7 @@
         document.getElementById('travel').value = secondsToHms(travelTime);
       }
     });
-  });
+  }
 
   // Convert value of seconds passed from DistanceMatrixService to Hr:Min:Sec.
   function secondsToHms(d) {

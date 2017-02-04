@@ -29,8 +29,16 @@
   line-height: 340%;
 }
 
+#hidden {
+  display: none;
+}
+
 .error {
   color: red;
   float: right;
-  margin-left: 55px;
+  margin-left: 100px;
+}
+
+#hidden input:read-only {
+  font-size: 150%;
 }
