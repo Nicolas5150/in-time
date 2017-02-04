@@ -33,6 +33,7 @@
 
   <br/><br/><br/><br/><br/>
   <div class="container">
+<form action="#" method="post" id="contact-forms">
     <div class="section enter_data">
       <div class="row">
         <div class="input-field col s12">
@@ -47,7 +48,7 @@
           <label for="datepicker">Date &amp; Time</label>
         </div>
         <div class="input-field col s6">
-          <input id="timepicker" type="text" class="validate" name="timepicker" placeholder="06:25 PM">
+          <input id="timepicker" type="text" class="validate" name="timepicker" placeholder="12:00 PM">
         </div>
       </div>
 
@@ -97,11 +98,13 @@
       <button type="submit" value="Submit" id="event-add-btn" style="float:right;"
       class="btn-large waves-effect waves-light deep-orange accent-4">Get Me There In-Time!</button>
     </div>
+</form>
   </div>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP9wo3OPbTjnXug18mUwl0T68xMReaKdQ&libraries=places"></script>
   <script src="../js/materialize.js"></script>
   <script src="../js/timepicki.js"></script>

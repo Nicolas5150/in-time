@@ -16,3 +16,21 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
+#message {
+  min-width: 100%;
+  max-width: 100%;
+	height: 120px;
+	border: 1px solid gray;
+	padding: 5px;
+}
+
+#message-space {
+  line-height: 340%;
+}
+
+.error {
+  color: red;
+  float: right;
+  margin-left: 55px;
+}
