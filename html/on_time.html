@@ -7,10 +7,10 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="../css/jquery-ui.min.css">
-  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel='stylesheet' type='text/css'href='../css/timepicki.css'/>
-  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/jquery-ui.min.css" type="text/css" rel="stylesheet"/>
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet"/>
+  <link href='../css/timepicki.css' type='text/css' rel='stylesheet'/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -72,10 +72,10 @@
         </div>
         <div class="input-field col s6">
            <select name="carrier">
-             <option value="1">AT&amp;T</option>
-             <option value="2">Sprint</option>
-             <option value="2">T-Mobile</option>
-             <option value="3">Verizon</option>
+             <option value="txt.att.net">AT&amp;T</option>
+             <option value="messaging.sprintpcs.com">Sprint</option>
+             <option value="tmomail.net">T-Mobile</option>
+             <option value="vtext.com">Verizon</option>
            </select>
            <label>Carrier</label>
         </div>
@@ -91,6 +91,11 @@
           <input id="travel" type="text" name="travel" placeholder="" readonly>
           <label for="travel">Travel Time</label>
         </div>
+      </div>
+
+      <div class="always-hidden">
+        <input id="momentObj" type="text" name="momentObj" placeholder="" readonly>
+        <input id="googleURL" type="text" name="googleURL" placeholder="" readonly>
       </div>
 
       <button type="submit" value="Submit" id="event-check-btn"
@@ -110,6 +115,7 @@
   <script src="../js/materialize.js"></script>
   <script src="../js/timepicki.js"></script>
   <script src="../js/moment.js"></script>
+  <script src="../js/urlshortener.js"></script>
   <script src="../js/navbar.js"></script>
   <script src="../js/events.js"></script>
   </body>

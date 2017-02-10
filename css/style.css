@@ -17,26 +17,16 @@
 	font-size: inherit;
 }
 
-#message {
-  min-width: 100%;
-  max-width: 100%;
-	height: 120px;
-	border: 1px solid gray;
-	padding: 5px;
-}
-
-#message-space {
-  line-height: 340%;
-}
-
-#hidden {
-  display: none;
-}
-
+/* Validation error occured */
 .error {
   color: red;
   float: right;
   margin-left: 100px;
+}
+
+/* Hide two input boxes until distance matrix is called */
+#hidden, .always-hidden {
+  display: none;
 }
 
 #hidden input:read-only {
