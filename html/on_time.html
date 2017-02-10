@@ -33,78 +33,88 @@
 
   <br/><br/><br/><br/><br/>
   <div class="container">
-<form action="#" method="post" id="event-form">
-    <div class="section enter_data">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="event" type="text" class="validate" name="events" placeholder="Work">
-          <label for="event">Event</label>
-        </div>
-      </div>
+    <form action="#" method="post" id="event-form">
+        <div class="section enter_data">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="event" type="text" class="validate" name="events" placeholder="Work">
+              <label for="event">Event</label>
+            </div>
+          </div>
 
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="datepicker" type="text" class="validate" name="datepicker" placeholder="09/02/17">
-          <label for="datepicker">Date &amp; Time</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="timepicker" type="text" class="validate" name="timepicker" placeholder="12:00 PM">
-        </div>
-      </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="datepicker" type="text" class="validate" name="datepicker" placeholder="09/02/17">
+              <label for="datepicker">Date &amp; Time</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="timepicker" type="text" class="validate" name="timepicker" placeholder="12:00 PM">
+            </div>
+          </div>
 
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="autocomplete-current" type="text" class="validate" name="current" placeholder="Tampa, FL"
-          onFocus="currentLocAuto()" autocomplete="off">
-          <label for="autocomplete-current">Current Location</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="autocomplete-destination" type="text" class="validate" name="destination" placeholder="Orlando, FL"
-          onFocus="destinationLocAuto()" autocomplete="off">
-          <label for="autocomplete-destination">Destination</label>
-        </div>
-      </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="autocomplete-current" type="text" class="validate" name="current" placeholder="Tampa, FL"
+              onFocus="currentLocAuto()" autocomplete="off">
+              <label for="autocomplete-current">Current Location</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="autocomplete-destination" type="text" class="validate" name="destination" placeholder="Orlando, FL"
+              onFocus="destinationLocAuto()" autocomplete="off">
+              <label for="autocomplete-destination">Destination</label>
+            </div>
+          </div>
 
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="number" type="text" class="validate" placeholder="5555555555" name="number" maxlength="10">
-          <label for="number">Number</label>
-        </div>
-        <div class="input-field col s6">
-           <select name="carrier">
-             <option value="txt.att.net">AT&amp;T</option>
-             <option value="messaging.sprintpcs.com">Sprint</option>
-             <option value="tmomail.net">T-Mobile</option>
-             <option value="vtext.com">Verizon</option>
-           </select>
-           <label>Carrier</label>
-        </div>
-      </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="number" type="text" class="validate" placeholder="5555555555" name="number" maxlength="10">
+              <label for="number">Number</label>
+            </div>
+            <div class="input-field col s6">
+               <select name="carrier">
+                 <option value="txt.att.net">AT&amp;T</option>
+                 <option value="messaging.sprintpcs.com">Sprint</option>
+                 <option value="tmomail.net">T-Mobile</option>
+                 <option value="vtext.com">Verizon</option>
+               </select>
+               <label>Carrier</label>
+            </div>
+          </div>
 
-      <br/><br/>
-      <div id="hidden" class="row">
-        <div class="input-field col s6">
-          <input id="depart" type="text" name="depart" placeholder="" readonly>
-          <label for="depart">Departure Time</label>
+          <br/><br/>
+          <div id="hidden" class="row">
+            <div class="input-field col s6">
+              <input id="depart" type="text" name="depart" placeholder="" readonly>
+              <label for="depart">Departure Time</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="travel" type="text" name="travel" placeholder="" readonly>
+              <label for="travel">Travel Time</label>
+            </div>
+          </div>
+
+          <div class="always-hidden">
+            <input id="momentObj" type="text" name="momentObj" placeholder="" readonly>
+            <input id="googleURL" type="text" name="googleURL" placeholder="" readonly>
+          </div>
+
+          <button type="submit" value="Submit" id="event-check-btn"
+          class="btn-large waves-effect waves-light deep-orange accent-4">Check time</button>
+
+          <button type="submit" value="Submit" id="event-add-btn" style="float:right;"
+          class="btn-large waves-effect waves-light deep-orange accent-4 disabled">Get Me There In-Time!</button>
         </div>
-        <div class="input-field col s6">
-          <input id="travel" type="text" name="travel" placeholder="" readonly>
-          <label for="travel">Travel Time</label>
-        </div>
-      </div>
+    </form>
 
-      <div class="always-hidden">
-        <input id="momentObj" type="text" name="momentObj" placeholder="" readonly>
-        <input id="googleURL" type="text" name="googleURL" placeholder="" readonly>
-      </div>
+  </div>
 
-      <button type="submit" value="Submit" id="event-check-btn"
-      class="btn-large waves-effect waves-light deep-orange accent-4">Check time</button>
-
-      <button type="submit" value="Submit" id="event-add-btn" style="float:right;"
-      class="btn-large waves-effect waves-light deep-orange accent-4 disabled">Get Me There In-Time!</button>
+    <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="../images/clock.png" alt="Smiley face" height="150" width="150">
+      <p>Your request has been submitted successfully!</p>
     </div>
-</form>
   </div>
 
   <!--  Scripts-->
@@ -118,5 +128,5 @@
   <script src="../js/urlshortener.js"></script>
   <script src="../js/navbar.js"></script>
   <script src="../js/events.js"></script>
-  </body>
+</body>
 </html>

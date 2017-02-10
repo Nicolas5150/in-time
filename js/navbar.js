@@ -6,4 +6,6 @@
     $('.parallax').parallax();
     // Materialize
     $('select').material_select();
+
+    
 })(jQuery);

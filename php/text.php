@@ -11,8 +11,7 @@
 
 		// Create a message for the user.
 		$subject = 'In-Time Alert';
-		$message = "Hey there, here's a notification letting you know to leave
-		for ". $events ." at ". $momentObj;
+		$message = "Hey there, here's a notification letting you know to leave for ". $events ." at ". $momentObj;
 
 		// Current Location, to destination. As well as gps route.
 		$urlLink = htmlspecialchars($_POST['googleURL']);
