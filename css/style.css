@@ -51,6 +51,7 @@ textarea {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
+
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
@@ -60,6 +61,7 @@ textarea {
     border: 1px solid #888;
     width: 80%;
 }
+
 /* The Close Button */
 .close {
     color: #aaa;
@@ -107,44 +109,66 @@ h2 {
   font-size: 15px;
   text-align: center;
 }
+
 .button:hover {
   box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
 }
 
-/* Form Fields */
 /* label color */
 .input-field label {
   color: #000;
 }
+
 /* Label focus color */
 .input-field input[type=text]:focus + label {
   color: #3D3B3E;
 }
+
 /* Label underline focus color */
 .input-field input[type=text]:focus {
   border-bottom: 1px solid #3D3B3E;
   box-shadow: 0 1px 0 0 #3D3B3E;
 }
+
 /* Valid color */
 .input-field input[type=text].valid {
   border-bottom: 1px solid #7295AD;
   box-shadow: 0 1px 0 0 #7295AD;
 }
+
 /* Invalid color */
 .input-field input[type=text].invalid {
   border-bottom: 1px solid #c398b1;
   box-shadow: 0 1px 0 0 #c398b1;
 }
+
 /* Validation error occured */
 .error {
   color: #c398b1;
   float: right;
   margin-left: 100px;
 }
+
+label.error {
+  color: #c398b1;;
+}
+
+label.error.active {
+  color: #c398b1;
+}
+
 /* Icon prefix focus color */
 .input-field .prefix.active {
   color: #000;
 }
+
 dropdown-content li > a, .dropdown-content li > span {
   color: #3D3B3E;
+}
+
+@media only screen and (min-width: 0) {
+  /* Form Fields */
+  html {
+    font-size: 16px;
+  }
 }
