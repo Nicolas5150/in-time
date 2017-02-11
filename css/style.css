@@ -17,20 +17,23 @@
 	font-size: inherit;
 }
 
-/* Validation error occured */
-.error {
-  color: red;
-  float: right;
-  margin-left: 100px;
-}
-
 /* Hide two input boxes until distance matrix is called */
-#hidden, .always-hidden {
+#hidden, .always-hidden, #event-add-btn {
   display: none;
 }
-
 #hidden input:read-only {
   font-size: 150%;
+}
+
+#message {
+  margin-top: 15px;
+}
+
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  overflow: scroll;
+  height: 5%;
 }
 
 /* The Modal (background) */
@@ -48,7 +51,6 @@
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
-
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
@@ -58,7 +60,6 @@
     border: 1px solid #888;
     width: 80%;
 }
-
 /* The Close Button */
 .close {
     color: #aaa;
@@ -66,10 +67,84 @@
     font-size: 28px;
     font-weight: bold;
 }
-
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+nav {
+  background-color:  #4F5766;
+}
+
+.header {
+  color:  #4985CF;
+}
+
+h2 {
+  color:  #3D3B3E;
+}
+
+.button {
+  background-color:  #7295AD;
+  color: white;
+  display: inline-block;
+  margin: 0.3em;
+  padding: 1.2em 5em;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  border: none;
+  font-size: 15px;
+  text-align: center;
+}
+.button:hover {
+  box-shadow: 1px 6px 15px rgba(0,0,0,0.5);
+}
+
+/* Form Fields */
+/* label color */
+.input-field label {
+  color: #000;
+}
+/* Label focus color */
+.input-field input[type=text]:focus + label {
+  color: #3D3B3E;
+}
+/* Label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #3D3B3E;
+  box-shadow: 0 1px 0 0 #3D3B3E;
+}
+/* Valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #7295AD;
+  box-shadow: 0 1px 0 0 #7295AD;
+}
+/* Invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #c398b1;
+  box-shadow: 0 1px 0 0 #c398b1;
+}
+/* Validation error occured */
+.error {
+  color: #c398b1;
+  float: right;
+  margin-left: 100px;
+}
+/* Icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
+}
+dropdown-content li > a, .dropdown-content li > span {
+  color: #3D3B3E;
 }

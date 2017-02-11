@@ -43,7 +43,7 @@
 
         // Now allow user to hit the submit button to add to database.
         // http://stackoverflow.com/questions/195951/change-an-elements-class-with-javascript
-        document.getElementById("event-add-btn").className = document.getElementById("event-add-btn").className.replace( /(?:^|\s)disabled(?!\S)/g , '' );
+        document.getElementById("event-add-btn").style.display = "block";
 
         // Shorten the url of the destination by
         // changing current and destination strings to url format (+ rather than space).
