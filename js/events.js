@@ -62,7 +62,6 @@
           success: function (shortUrl) {
             document.getElementById('googleURL').value = shortUrl;
 
-
           },
           error: function(err) {
             alert(JSON.stringify(err));

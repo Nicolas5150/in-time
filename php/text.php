@@ -1,25 +1,20 @@
 <?php
 		// Carrier and number to send text message to.
+		// Create one string for phone to email type purposes.
 		$number = htmlspecialchars($_POST['number']);
 		$carrier = htmlspecialchars($_POST['carrier']);
-		// Create one string for phone to email type purposes.
 		$numberAndCarrier = $number ."@". $carrier;
 
-		// Event details and time.
+		// Event details and time / momentObj.
 		$events = htmlspecialchars($_POST['events']);
 		$momentObj = htmlspecialchars($_POST['momentObj']);
 
-		// Create a message for the user.
+		// Create a message with subject for the user.
+		// Concat the message with the compressed google url for the message.
 		$subject = 'In-Time Alert';
-		$message = "Hey there, here's a notification letting you know to leave for ". $events ." at ". $momentObj;
-
-		// Current Location, to destination. As well as gps route.
-		$urlLink = htmlspecialchars($_POST['googleURL']);
+		$message = "This is a reminder letting you know to leave for ". $events ." at ". $momentObj ."  ";
+		$message .= htmlspecialchars($_POST['googleURL']);
 
 		// Send off the text message
-		mail($numberAndCarrier, $message, $urlLink);
-
-		//echo $numberAndCarrier ."\n". $message ."\n". $urlLink ."\n". $momentObj;
-		echo $urlLink;
-
+		mail($numberAndCarrier, $subject, $message);
 ?>

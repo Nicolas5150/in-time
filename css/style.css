@@ -187,7 +187,7 @@ dropdown-content li > a, .dropdown-content li > span {
 
 @media (max-width: 970px) {
   .parallax-container {
-    height: 350px;
+    height: 300px;
 
   }
 
