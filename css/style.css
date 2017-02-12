@@ -92,7 +92,7 @@ h2 {
   background-color:  #7295AD;
   color: white;
   display: inline-block;
-  margin: 0.3em;
+  margin-bottom: 15px;
   padding: 1.2em 5em;
   overflow: hidden;
   position: relative;
@@ -150,7 +150,7 @@ h2 {
 }
 
 label.error {
-  color: #c398b1;;
+  color: #c398b1;
 }
 
 label.error.active {
@@ -166,9 +166,33 @@ dropdown-content li > a, .dropdown-content li > span {
   color: #3D3B3E;
 }
 
+/* Modal Popup after ajax requests */
+.modal {
+  text-align: center;
+}
+
+.submit_icon {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 @media only screen and (min-width: 0) {
   /* Form Fields */
   html {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 970px) {
+  .parallax-container {
+    height: 350px;
+
+  }
+
+  /* Buttons expand to full container width */
+  button {
+    width: 100%;
   }
 }

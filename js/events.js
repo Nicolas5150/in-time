@@ -62,7 +62,6 @@
           success: function (shortUrl) {
             document.getElementById('googleURL').value = shortUrl;
 
-            modalEvent();
 
           },
           error: function(err) {
@@ -80,7 +79,8 @@
           url: 'http://sulley.cah.ucf.edu/~ni927795/in-time/php/text.php',
           data: $('#event-form').serialize(),
           success: function (data) {
-            alert(data);
+            // could pass data if needed.
+            modalEvent();
           }
         });
     });
